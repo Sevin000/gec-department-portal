@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GEC Wayanad Department Portal">
+  <title>Department Portal | GEC Wayanad</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner">
+  <a class="brand" href="#home"><span class="brand-mark">G</span><span>GEC Wayanad<small>Department Portal</small></span></a>
+  <nav aria-label="Main navigation"><a href="#about">About</a><a href="#programmes">Programmes</a><a href="#faculty">Faculty</a><a href="#facilities">Facilities</a><a href="#research">Research</a></nav>
+</div></header>
+<main id="main">
+<section class="hero" id="home"><div class="container"><p class="eyebrow">GOVERNMENT ENGINEERING COLLEGE WAYANAD</p><h1>Department Portal</h1><p class="hero-copy">Explore academic programmes, faculty expertise, facilities and research in one place.</p><a class="primary-link" href="#faculty">Explore faculty →</a></div></section>
+<div class="container"><p id="app-status" class="app-status" role="status" aria-live="polite">Loading department information…</p></div>
+<section id="about" class="section container"><div class="section-heading"><p class="eyebrow">OVERVIEW</p><h2>About the Department</h2></div><div id="department-info"></div><div id="stats" class="stats"></div></section>
+<section id="programmes" class="section section-muted"><div class="container"><div class="section-heading"><p class="eyebrow">ACADEMICS</p><h2>Academic Programmes</h2></div><div id="programmes-list" class="card-grid"></div></div></section>
+<section id="faculty" class="section container"><div class="section-heading"><p class="eyebrow">OUR PEOPLE</p><h2>Faculty Directory</h2><p>Search by name, designation or area of specialization.</p></div>
+<div class="filters"><label for="faculty-search">Search faculty</label><input id="faculty-search" type="search" placeholder="Type a name or specialization…" disabled><label for="specialization-filter">Specialization</label><select id="specialization-filter" disabled><option value="">All specializations</option></select></div>
+<p id="result-count" class="result-count" role="status" aria-live="polite"></p><div id="faculty-list" class="card-grid"></div><p id="no-results" class="empty-state" hidden>No faculty match your search.</p></section>
+<section id="facilities" class="section section-muted"><div class="container"><div class="section-heading"><p class="eyebrow">INFRASTRUCTURE</p><h2>Facilities</h2></div><div id="facilities-list" class="card-grid"></div></div></section>
+<section id="research" class="section container"><div class="section-heading"><p class="eyebrow">EXPERTISE</p><h2>Research Areas</h2></div><div id="research-list" class="tag-list"></div></section>
+<section id="admin" class="section section-muted"><div class="container admin-layout"><div class="section-heading"><p class="eyebrow">ADMINISTRATION</p><h2>Faculty management</h2><p>Sign in to add or update faculty records.</p></div>
+<div id="login-panel" ```html
+<div class="admin-panel">
+    <h3>Administrator login</h3>
+
+    <form id="login-form">
+        <label for="username">Username</label>
+        <input
+            id="username"
+            name="username"
+            type="text"
+            value="admin"
+            autocomplete="username"
+            required
+        >
+
+        <label for="password">Password</label>
+        <input
+            id="password"
+            name="password"
+            type="password"
+            value="gecadmin123"
+            autocomplete="current-password"
+            required
+        >
+
+        <button class="button" type="submit">Sign in</button>
+    </form>
+</div>
+
+<div id="editor-panel" class="admin-panel" hidden>
+    <div class="panel-top">
+        <h3 id="form-title">Add faculty member</h3>
+        <button id="logout-button" class="button button-light" type="button">
+            Log out
+        </button>
+    </div>
+```
+<form id="faculty-form"><input id="faculty-id" type="hidden"><label for="faculty-name">Full name</label><input id="faculty-name" required maxlength="120"><label for="faculty-designation">Designation</label><input id="faculty-designation" required maxlength="120"><label for="faculty-specialization">Specializations (comma-separated)</label><input id="faculty-specialization" placeholder="Artificial Intelligence, Machine Learning" required><div class="form-actions"><button class="button" type="submit">Save faculty</button><button id="cancel-edit" class="button button-light" type="button" hidden>Cancel edit</button></div></form></div>
+<p id="admin-status" class="admin-status" role="status" aria-live="polite"></p></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> GEC Wayanad · Department Portal</p><p>Academic demonstration · Sample data</p></div></footer>
+</body></html>
